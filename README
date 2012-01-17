@@ -1,0 +1,27 @@
+This is a simple PHP widget that scrapes http://swtor.com/server-status for relevant server information.
+
+See it in action here: http://cavalrycollective.com/swtor/serverStatus/
+
+The status is cached locally by default for 5 minutes for speed purposes so we're not constantly hitting the sWTOR website.
+
+Configuration:
+1. Edit the swtor-server-widget.php file.
+2. Modify the $serverName variable with whatever server name you'd like to get the status for. This should be in all lower case. Spaces are ok.
+3. If you want, you can change the name the locally cached version of the html from the SWTOR site that we use to get our status. $cache_file_name
+4. You can change the length of time to cache the status as well, measured in seconds. (300 = 5min) $cache_time_life.
+5. Edit the swtor-widget.css file as you see fit and use the styles in your existing stylesheet, or just include this one into your site.
+6. When you're all done, use include('yourFilePath/swtor-server-widget.php') on your page.
+
+
+It generates some very simple HTML with some divs and classes so you can style as you see fit.
+
+<div id="swtor-serverStatus-widget">
+    <div class="container">
+        <div class="name">Terentatek (PVP, East)</div>
+        <div class="status UP"><strong>Status:</strong> UP</div>
+	<div class="population"><strong>Population:</strong> Standard</div>
+    </div>
+</div>
+
+
+This is all made possible with the PHP Simple HTML Dom Parser at http://simplehtmldom.sourceforge.net/
