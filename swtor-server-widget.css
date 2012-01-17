@@ -1,0 +1,42 @@
+#swtor-serverStatus-widget{
+        min-width:185px;
+        max-width:225px;
+        height:77px;
+        background:url(graphics/swtorLogo.png) top left no-repeat;
+        position:relative;
+    }
+        #swtor-serverStatus-widget .container{
+            position:absolute;
+            top:24px;
+            left:45px;
+            background:rgba(5,8,15,.8);
+            padding:6px 30px 6px 6px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            border: 2px solid rgba(56,70,94,1);
+            font-family:Verdana;
+            font-size:11px;
+            color:#fff;
+            -webkit-box-shadow:0 0 15px #ffffff; 
+            -moz-box-shadow: 0 0 15px #ffffff; 
+            box-shadow:0 0 15px #ffffff; 
+        }
+            #swtor-serverStatus-widget .status.up
+            ,#swtor-serverStatus-widget .status.down{
+                background:url(graphics/arrows.png) top left;
+                height:18px;
+                width:17px;
+                text-indent:-9000px;
+                position: absolute;
+                right:6px;
+                top:8px;
+            }
+                #swtor-serverStatus-widget .status.down{
+                    background-position:bottom left;
+                }
+                
+            #swtor-serverStatus-widget .population{
+                font-size:8px;
+                line-height:16px;
+            }
